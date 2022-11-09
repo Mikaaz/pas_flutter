@@ -29,7 +29,7 @@ class ShoesTile extends StatelessWidget {
                 height: 200,
                 width: 200,
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       "New Product",
