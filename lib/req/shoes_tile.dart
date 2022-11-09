@@ -15,7 +15,6 @@ class ShoesTile extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            
             //image
             ClipRRect(
               borderRadius: BorderRadius.circular(12),
@@ -24,22 +23,28 @@ class ShoesTile extends StatelessWidget {
 
             //shoes name
             Padding(
-              padding: const EdgeInsets.symmetric(vertical: 12.0, horizontal: 8.0),
-              child: Column(
-                children: [
-                  Text(
-                    "New Product",
-                    style: TextStyle(fontSize: 10),
-                  ),
-                  Text(
-                    "ADIDAS YEEZY 450 SULFUR",
-                    style: TextStyle(fontSize: 10),
-                  ),
-                  Text(
-                    "Rp 2.999.000",
-                    style: TextStyle(fontSize: 10),
-                  ),
-                ],
+              padding:
+                  const EdgeInsets.symmetric(vertical: 12.0, horizontal: 8.0),
+              child: Container(
+                height: 200,
+                width: 200,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text(
+                      "New Product",
+                      style: TextStyle(fontSize: 10),
+                    ),
+                    Text(
+                      "ADIDAS YEEZY 450 SULFUR",
+                      style: TextStyle(fontSize: 10),
+                    ),
+                    Text(
+                      "Rp 2.999.000",
+                      style: TextStyle(fontSize: 10),
+                    ),
+                  ],
+                ),
               ),
             )
           ],
