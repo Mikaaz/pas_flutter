@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:goshio/pages/home_page.dart';
+import 'package:goshio/tumbal.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,8 +14,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: HomePage(),
-      theme: ThemeData(brightness: Brightness.dark,
-      primarySwatch: Colors.orange),
+      theme:
+          ThemeData(brightness: Brightness.dark, primarySwatch: Colors.orange),
     );
   }
 }

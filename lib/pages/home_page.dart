@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:goshio/req/shoes_tile.dart';
+import 'package:goshio/req/shoes_type.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -9,6 +10,38 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  // List of Shoes Types
+  final List shoesType = [
+    // [shoes type, isSelected]
+    [
+      'All',
+      true,
+    ],
+    [
+      'Nike',
+      false,
+    ],
+    [
+      'Adidas',
+      false,
+    ],
+    [
+      'Puma',
+      false,
+    ],
+    [
+      'Reebok',
+      false,
+    ],
+    [
+      'Skechers',
+      false,
+    ],
+  ];
+
+  // user tapped on shoes types
+  void shoesTypeSelected() {}
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -74,10 +107,22 @@ class _HomePageState extends State<HomePage> {
             height: 25,
           ),
 
+          //horizontal listview of shoes types
+          Container(
+            height: 50,
+            child: ListView.builder(itemBuilder: (context, index) {
+              return ShoesType(
+                isSelected: true,
+                onTap: () {},
+                shoesType: '',
+              );
+            }),
+          ),
+
           //horizontal list view of shoes tiles
           Expanded(
               child: ListView(
-                scrollDirection: Axis.horizontal,
+            scrollDirection: Axis.horizontal,
             children: [
               ShoesTile(),
             ],
