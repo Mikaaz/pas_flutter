@@ -57,8 +57,6 @@ class _HomePageState extends State<HomePage> {
         elevation: 0,
         // backgroundColor: Colors.transparent,
         leading: Icon(Icons.widgets, color: Colors.orange),
-        backgroundColor: Colors.transparent,
-        leading: Icon(Icons.widgets, color: Color(0xFFC74600)),
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 20.0),
@@ -140,42 +138,42 @@ class _HomePageState extends State<HomePage> {
             scrollDirection: Axis.horizontal,
             children: [
               ShoesTile(
-                shoesImagePath: 'lib/assets/image/sulfur.png',
+                shoesImagePath: 'assets/image/sulfur.png',
                 shoesName: 'ADIDAS YEEZY 450 SULFUR',
                 shoesPrice: '2.999.000',
               ),
               ShoesTile(
-                shoesImagePath: 'lib/assets/image/safflower.png',
+                shoesImagePath: 'assets/image/safflower.png',
                 shoesName: 'ADIDAS YEEZY 700 V3 MONO SAFFLOWER',
                 shoesPrice: '3.499.000',
               ),
               ShoesTile(
-                shoesImagePath: 'lib/assets/image/multi.png',
+                shoesImagePath: 'assets/image/multi.png',
                 shoesName: 'Nike BE-DO-WIN “Multi-Color”',
                 shoesPrice: '1.399.000',
               ),
               ShoesTile(
-                shoesImagePath: 'lib/assets/image/xetic.png',
+                shoesImagePath: 'assets/image/xetic.png',
                 shoesName: 'PUMA XETIC HALFLIFE',
                 shoesPrice: '975.000',
               ),
               ShoesTile(
-                shoesImagePath: 'lib/assets/image/lebron.png',
+                shoesImagePath: 'assets/image/lebron.png',
                 shoesName: ' NIKE LEBRON XIX "CHRISTMAS"',
                 shoesPrice: '1.399.000',
               ),
               ShoesTile(
-                shoesImagePath: 'lib/assets/image/ice.png',
+                shoesImagePath: 'assets/image/ice.png',
                 shoesName: 'Air Jordan 1 High Zoom CMFT Baby Blue',
                 shoesPrice: '3.599.000',
               ),
               ShoesTile(
-                shoesImagePath: 'lib/assets/image/fuse.png',
+                shoesImagePath: 'assets/image/fuse.png',
                 shoesName: 'PUMA FUSE Training Shoes',
                 shoesPrice: '699.000',
               ),
               ShoesTile(
-                shoesImagePath: 'lib/assets/image/alphafly.png',
+                shoesImagePath: 'assets/image/alphafly.png',
                 shoesName: 'Nike Air Zoom Alphafly Next% 2',
                 shoesPrice: '5.250.000',
               ),
