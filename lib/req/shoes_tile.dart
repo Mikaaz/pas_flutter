@@ -20,7 +20,7 @@ class ShoesTile extends StatelessWidget {
             //image
             ClipRRect(
               borderRadius: BorderRadius.circular(12),
-              child: Image.asset("lib/assets/image/sulfur.png"),
+              child: Image.asset("assets/image/sulfur.png"),
             ),
 
             //shoes name

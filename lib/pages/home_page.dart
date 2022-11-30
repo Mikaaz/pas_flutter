@@ -45,15 +45,15 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[900],
+      backgroundColor: Color(0xFF00030B),
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.transparent,
-        leading: Icon(Icons.widgets, color: Colors.orange),
+        leading: Icon(Icons.widgets, color: Color(0xFFC74600)),
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 20.0),
-            child: Icon(Icons.person, color: Colors.orange),
+            child: Icon(Icons.person, color: Color(0xFFC74600)),
           )
         ],
       ),
@@ -81,6 +81,7 @@ class _HomePageState extends State<HomePage> {
               style: TextStyle(
                 fontFamily: "futur",
                 fontSize: 36,
+                color: Color(0xFFFFFFFF)
               ),
             ),
           ),
