@@ -89,20 +89,28 @@ class _OnboardingState extends State<Onboarding> {
             height: 60,
             margin: EdgeInsets.all(40),
             width: double.infinity,
-            // color: Theme.of(context).primaryColor,
             child: FlatButton(
-              child: Text(currentIndex == contents.length -1 ? "Login": "Next"),
+              child: Text(
+                  currentIndex == contents.length - 1 ? "Continue" : "Next"),
               onPressed: () {
-                if (currentIndex == contents.length -1){
-                  Navigator.push(context, MaterialPageRoute(builder: (_)=> HomePage(),
-                  ));
+                if (currentIndex == contents.length - 1) {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => HomePage(),
+                    ),
+                  );
                 }
-                _controller.nextPage(duration: Duration(milliseconds: 100), curve: Curves.bounceIn,);
+                _controller.nextPage(
+                  duration: Duration(milliseconds: 100),
+                  curve: Curves.bounceIn,
+                );
               },
               color: Theme.of(context).primaryColor,
-              textColor: Color(0xFFFFFFFF),
+              textColor: Colors.white,
               shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20)),
+                borderRadius: BorderRadius.circular(20),
+              ),
             ),
           )
         ],
@@ -110,15 +118,16 @@ class _OnboardingState extends State<Onboarding> {
     );
   }
 
+
   Container buildDot(int index, BuildContext context) {
-    return Container(
-      height: 10,
-      width: currentIndex == index ? 25 : 10,
-      margin: EdgeInsets.only(right: 5),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20),
-        color: Theme.of(context).primaryColor,
-      ),
-    );
+      return Container(
+        height: 10,
+        width: currentIndex == index ? 25 : 10,
+        margin: EdgeInsets.only(right: 5),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
+          color: Theme.of(context).primaryColor,
+        ),
+      );
+    }
   }
-}
