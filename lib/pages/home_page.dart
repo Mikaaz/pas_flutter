@@ -55,12 +55,12 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Color(0xFF00030B),
       appBar: AppBar(
         elevation: 0,
-        // backgroundColor: Colors.transparent,
-        leading: Icon(Icons.widgets, color: Colors.orange),
+        backgroundColor: Colors.transparent,
+        leading: Icon(Icons.widgets, color: Color(0xFFC74600)),
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 20.0),
-            child: Icon(Icons.person, color: Colors.orange),
+            child: Icon(Icons.person, color: Color(0xFFC74600)),
           )
         ],
       ),
@@ -86,6 +86,7 @@ class _HomePageState extends State<HomePage> {
             child: Text(
               "Find the best shoes for you",
               style: TextStyle(
+                color: Color(0xFFFFFFFF),
                 fontFamily: "futur",
                 fontSize: 36,
               ),
