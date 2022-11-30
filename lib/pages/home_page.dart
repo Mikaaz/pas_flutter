@@ -40,7 +40,14 @@ class _HomePageState extends State<HomePage> {
   ];
 
   // user tapped on shoes types
-  void shoesTypeSelected() {}
+  void shoesTypeSelected(int index) {
+    setState(() {
+      for (int i = 0; i < shoesType.length; i++) {
+        shoesType[i][1] = false;
+      }
+      shoesType[index][1] = true;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +55,7 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Colors.grey[900],
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: Colors.transparent,
+        // backgroundColor: Colors.transparent,
         leading: Icon(Icons.widgets, color: Colors.orange),
         actions: [
           Padding(
@@ -110,13 +117,19 @@ class _HomePageState extends State<HomePage> {
           //horizontal listview of shoes types
           Container(
             height: 50,
-            child: ListView.builder(itemBuilder: (context, index) {
-              return ShoesType(
-                isSelected: true,
-                onTap: () {},
-                shoesType: '',
-              );
-            }),
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount: shoesType.length,
+              itemBuilder: (context, index) {
+                return ShoesType(
+                  shoesType: shoesType[index][0],
+                  isSelected: shoesType[index][1],
+                  onTap: () {
+                    shoesTypeSelected(index);
+                  },
+                );
+              },
+            ),
           ),
 
           //horizontal list view of shoes tiles
@@ -124,7 +137,46 @@ class _HomePageState extends State<HomePage> {
               child: ListView(
             scrollDirection: Axis.horizontal,
             children: [
-              ShoesTile(),
+              ShoesTile(
+                shoesImagePath: 'lib/assets/image/sulfur.png',
+                shoesName: 'ADIDAS YEEZY 450 SULFUR',
+                shoesPrice: '2.999.000',
+              ),
+              ShoesTile(
+                shoesImagePath: 'lib/assets/image/safflower.png',
+                shoesName: 'ADIDAS YEEZY 700 V3 MONO SAFFLOWER',
+                shoesPrice: '3.499.000',
+              ),
+              ShoesTile(
+                shoesImagePath: 'lib/assets/image/multi.png',
+                shoesName: 'Nike BE-DO-WIN “Multi-Color”',
+                shoesPrice: '1.399.000',
+              ),
+              ShoesTile(
+                shoesImagePath: 'lib/assets/image/xetic.png',
+                shoesName: 'PUMA XETIC HALFLIFE',
+                shoesPrice: '975.000',
+              ),
+              ShoesTile(
+                shoesImagePath: 'lib/assets/image/lebron.png',
+                shoesName: ' NIKE LEBRON XIX "CHRISTMAS"',
+                shoesPrice: '1.399.000',
+              ),
+              ShoesTile(
+                shoesImagePath: 'lib/assets/image/ice.png',
+                shoesName: 'Air Jordan 1 High Zoom CMFT Baby Blue',
+                shoesPrice: '3.599.000',
+              ),
+              ShoesTile(
+                shoesImagePath: 'lib/assets/image/fuse.png',
+                shoesName: 'PUMA FUSE Training Shoes',
+                shoesPrice: '699.000',
+              ),
+              ShoesTile(
+                shoesImagePath: 'lib/assets/image/alphafly.png',
+                shoesName: 'Nike Air Zoom Alphafly Next% 2',
+                shoesPrice: '5.250.000',
+              ),
             ],
           ))
         ],

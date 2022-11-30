@@ -1,7 +1,15 @@
 import 'package:flutter/material.dart';
 
 class ShoesTile extends StatelessWidget {
-  const ShoesTile({super.key});
+  final String shoesImagePath;
+  final String shoesName;
+  final String shoesPrice;
+
+  ShoesTile({
+    required this.shoesImagePath,
+    required this.shoesName,
+    required this.shoesPrice,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +28,7 @@ class ShoesTile extends StatelessWidget {
             //image
             ClipRRect(
               borderRadius: BorderRadius.circular(12),
-              child: Image.asset("lib/assets/image/sulfur.png"),
+              child: Image.asset(shoesImagePath),
             ),
 
             //shoes name
@@ -32,7 +40,7 @@ class ShoesTile extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "ADIDAS YEEZY 450 SULFUR",
+                    shoesName,
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
@@ -55,7 +63,7 @@ class ShoesTile extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text('Rp 2.999.000'),
+                  Text('Rp ' + shoesPrice),
                   Container(
                       padding: EdgeInsets.all(4),
                       decoration: BoxDecoration(
